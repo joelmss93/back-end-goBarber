@@ -33,7 +33,7 @@
       "argsIgnorePattern": "_"
     }],
     "@typescript-eslint/naming-convention": [
-      "error",
+      "warn",
       {
         "selector": "interface",
         "prefix": ["I"],
