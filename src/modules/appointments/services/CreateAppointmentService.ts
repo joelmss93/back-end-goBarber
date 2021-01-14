@@ -26,9 +26,9 @@ class CreateAppointmentService {
   }: IRequestDTO): Promise<Appointment> {
     const appointmentDate = startOfHour(date);
 
-    if (isBefore(appointmentDate, Date.now())) {
-      throw new AppError("You cant't create an appointment on a past date");
-    }
+    // if (isBefore(appointmentDate, Date.now())) {
+    //   throw new AppError("You cant't create an appointment on a past date");
+    // }
 
     if (user_id === provider_id) {
       throw new AppError("You can't create an appointment with yourself");
@@ -42,11 +42,11 @@ class CreateAppointmentService {
       throw new AppError('This appointment is already booked', 400);
     }
 
-    if (getHours(appointmentDate) < 8 || getHours(appointmentDate) > 17) {
-      throw new AppError(
-        'You can only create appointments between 8am and 5 pm',
-      );
-    }
+    // if (getHours(appointmentDate) < 8 || getHours(appointmentDate) > 17) {
+    //   throw new AppError(
+    //     'You can only create appointments between 8am and 5 pm',
+    //   );
+    // }
 
     const appointment = await this.appointmentsRepository.create({
       provider_id,
