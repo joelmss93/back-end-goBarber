@@ -1,12 +1,10 @@
-import { fromUnixTime } from 'date-fns/esm';
 import { container } from 'tsyringe';
 
 import mailConfig from '@config/mail';
 
-import IMailProvider from './models/IMailProvider';
-
 import EtherialMailProvider from './implementations/EtherialMailProvider';
 import SESMailProvider from './implementations/SESMailProvider';
+import IMailProvider from './models/IMailProvider';
 
 const providers = {
   etherial: container.resolve(EtherialMailProvider),
