@@ -20,7 +20,7 @@ providersRouter.get(
   '/:provider_id/month-availability',
   celebrate({
     [Segments.PARAMS]: {
-      provider_id: Joi.string().uuid().required,
+      provider_id: Joi.string().uuid().required(),
     },
   }),
   providerMonthAvailabilityController.index,
@@ -30,7 +30,7 @@ providersRouter.get(
   '/:provider_id/day-availability',
   celebrate({
     [Segments.PARAMS]: {
-      provider_id: Joi.string().uuid().required,
+      provider_id: Joi.string().uuid().required(),
     },
   }),
   providerDayAvailabilityController.index,
