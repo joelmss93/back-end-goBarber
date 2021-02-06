@@ -7,5 +7,6 @@ temp/
 
 covarage/
 
-tpm/*
+tmp/*
+tmp/uploads/*
 !tmp/.gitkeep
