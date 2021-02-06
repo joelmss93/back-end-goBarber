@@ -5,5 +5,7 @@ build/
 temp/
 .env
 
+covarage/
+
 tpm/*
 !tmp/.gitkeep
